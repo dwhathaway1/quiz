@@ -43,21 +43,97 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkWyoming = (CheckBox) findViewById(R.id.wyoming_checkbox);
         boolean hasWyoming = checkWyoming.isChecked();
         CheckBox checkAlaska = (CheckBox) findViewById(R.id.alaska_checkbox);
-        boolean hasAlaska = checkAlaska.isSelected();
+        boolean hasAlaska = checkAlaska.isChecked();
         CheckBox checkVermont = (CheckBox) findViewById(R.id.vermont_checkbox);
-        boolean hasVermont = checkVermont.isSelected();
+        boolean hasVermont = checkVermont.isChecked();
         CheckBox checkDelaware = (CheckBox) findViewById(R.id.delaware_checkbox);
-        boolean hasDelaware = checkDelaware.isSelected();
+        boolean hasDelaware = checkDelaware.isChecked();
 
 
-        if (rbRivers.isChecked() && rbMountain.isChecked() && edSouthern.getText().toString().equals("Hawaii")
-        && hasWyoming && hasAlaska && hasVermont && hasDelaware)
+
+        if (rbRivers.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 1/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (hasWyoming && hasAlaska && hasVermont && hasDelaware
+                )
+
+        {Toast.makeText(this, "You got 1/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (edSouthern.getText().toString().equals("Hawaii"))
+
+
+        {Toast.makeText(this, "You got 1/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (rbMountain.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 1/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (hasWyoming && hasAlaska && hasVermont && hasDelaware && rbRivers.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (rbRivers.isChecked() && edSouthern.getText().toString().equals("Hawaii"))
+
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (rbRivers.isChecked() && rbMountain.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (hasWyoming && hasAlaska && hasVermont && hasDelaware && edSouthern.getText().toString().equals("Hawaii"))
+
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (hasWyoming && hasAlaska && hasVermont && hasDelaware && rbMountain.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (edSouthern.getText().toString().equals("Hawaii") && rbMountain.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (rbRivers.isChecked() && rbMountain.isChecked()
+                && edSouthern.getText().toString().equals("Hawaii") && hasWyoming && hasAlaska && hasVermont && hasDelaware)
+
 
             {Toast.makeText(this, "You are Right! 4/4", Toast.LENGTH_SHORT).show();
             }
 
+       else if (rbRivers.isChecked() && rbMountain.isChecked()
+                && edSouthern.getText().toString().equals("Hawaii"))
+
+        {Toast.makeText(this, "You got 3/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (rbRivers.isChecked() && rbMountain.isChecked()
+                )
+
+        {Toast.makeText(this, "You got 2/4 right.", Toast.LENGTH_SHORT).show();
+        }
+
+
+
         else {
-            Toast.makeText(this, "Sorry Try Again!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You Got 0/4 right", Toast.LENGTH_SHORT).show();
                             }
     }
 
